@@ -13,7 +13,7 @@ const BouncyProgressBox : React.FC<BPBProps> = (props : BPBProps) => {
     const {blockStyle, lineStyle} = useStyle(props.w, props.h, props.scale)
     return (
         <React.Fragment>
-            <button onClick = {() => props.onClick()}></button>
+            <button onClick = {() => props.onClick()}>Click on me</button>
             <div style = {blockStyle()}>
                 <div style = {lineStyle()}></div>
             </div>

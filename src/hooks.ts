@@ -1,7 +1,7 @@
 import {useState, useEffect, CSSProperties} from 'react'
 
-const scGap : number = 0.02 
-const delay : number = 20 
+const scGap : number = 0.03 / 3
+const delay : number = 18 
 
 export const useAnimatedScale = () => {
     const [scale, setScale] = useState(0)
@@ -79,12 +79,14 @@ export const useStyle = (w : number, h : number, scale : number) => {
         lineStyle() : CSSProperties {
             const width : string = `${lineW}px`
             const height : string = `${lineH}px`
-            const background = 'white'
+            const background = '#311B92'
+            const top = `${blockH - lineH}px`
             return {
                 position, 
                 width,
                 height,
-                background 
+                background, 
+                top
             }           
         }
     }
